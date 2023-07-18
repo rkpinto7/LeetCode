@@ -5,6 +5,8 @@ class Solution:
         return_list = []
 
         def backtracker(curr_arr, curr_sum):
+            if curr_sum > target:
+                return
             if curr_sum == target:
                 curr_arr.sort()
                 if tuple(curr_arr) not in hash_set:
